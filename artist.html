@@ -19,6 +19,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Artist Page</title>
+
+    Either in track details or album details , all artist names should be clickable.
+    When a user clicks on artist, redirect the user to the artist page and show artist details there. Artist's id is in the response of search or album.
+    Parameter:  artist id 
+    Endpoint: https://striveschool-api.herokuapp.com/api/deezer/artist/{id}
+    Example: https://striveschool-api.herokuapp.com/api/deezer/artist/412
+
   </head>
   <body>
     <div class="artist-page-wrapper">
@@ -148,9 +155,9 @@
                     </div>
                    
                     <div class="hero-links d-flex justify-content-between mt-4 pt-5 mr-5">
-                      <h6>OVERVIEW</h6>
-                      <h6>RELATED ARTISTS</h6>
-                      <h6>ABOUT</h6>
+                      <h6 class="mx-1">OVERVIEW</h6>
+                      <h6 class="mx-1">RELATED ARTISTS</h6>
+                      <h6 class="mx-1">ABOUT</h6>
                     </div>
                   </div>
                 </div>
