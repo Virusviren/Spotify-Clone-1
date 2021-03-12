@@ -67,6 +67,7 @@
 
 /* SIDEBAR SECTION SIDEBAR */
 
+
 .sidebar {
 	margin: 0;
 	padding: 0;
@@ -75,6 +76,10 @@
 	background-color: rgb(0, 0, 0);
 	transition: 0.5s;
 	flex-grow: 1;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
 }
 
 .sidebar-btn:hover p {
@@ -96,7 +101,10 @@
 	width: 100%;
 	padding-left: 10%;
 	padding-right: 10%;
+	overflow-x: hidden;
 }
+
+
 
 .sidebar-btn {
 	padding-left: 0%;
@@ -245,6 +253,44 @@
 	margin-right: 4%;
 }
 
+.hero-text a:link {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+	outline: none !important;
+   	box-shadow: none;
+	transition: 0.5s;
+}
+
+.hero-text a:focus {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+	outline: none !important;
+   	box-shadow: none;
+}
+  
+.hero-text a:visited {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+  
+.hero-text a:hover {
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	text-decoration: underline;
+	text-decoration-color: var(--background-color)
+}
+  
+.hero-text a:active {
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	text-decoration: underline;
+	text-decoration-color: var(--background-color);
+	
+}
+
 .hero-text p {
 	font-family: 'Circula';
 	font-size: 0.7rem;
@@ -300,7 +346,7 @@
 }
 
 .hero-links {
-	width: 80%;
+	width: 100%;
 	margin-left: 10%;
 }
 .hero-text h6 {
@@ -311,6 +357,9 @@
 	color: rgb(165, 165, 165);
 	border-bottom: 2px solid transparent;
 	transition: 0.5s;
+	display: flex;
+	flex-wrap: nowrap;
+
 }
 
 h6:hover {
@@ -447,4 +496,8 @@ footer a:hover {
 
 input[type='range']:focus {
 	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+h3 {
+	color: red;
 }
