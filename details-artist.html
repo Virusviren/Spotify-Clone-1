@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Artist Details</title>
+</head>
+<body>
+    <h1><a href="artist.html">Back</a> </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 card-column">
+
+
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script>
+    window.onload = function() {
+        console.log(window.location.search);
+        const URLparams = new URLSearchParams(window.location.search);
+        
+        
+        fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/412`)
+            .then((response) => response.json())
+            .then((artistData) => console.log(artistData))
+            .catch((err) => console.log(err));
+
+        const createCard = (artistData) => {
+            const cardCol = document.querySelector(".card-column")
+
+        }
+        // const createList = (bookdata) => {
+        //     console.log(bookdata);
+        //     const bookStore = document.querySelector(".bookstore");
+        //     const bookList = document.createElement("ul");
+        //     bookStore.appendChild(bookList);
+        //     bookdata.forEach((book, index) => {
+        //     bookList.innerHTML += `<li>${book.title}</li>`;
+        //     });
+        // };
+    }
+</script>
+</body>
+</html>
