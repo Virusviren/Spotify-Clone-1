@@ -20,17 +20,13 @@
     <link rel="stylesheet" href="style.css" />
     <title>Artist Page</title>
 
-    Either in track details or album details , all artist names should be clickable.
-    When a user clicks on artist, redirect the user to the artist page and show artist details there. Artist's id is in the response of search or album.
-    Parameter:  artist id 
-    Endpoint: https://striveschool-api.herokuapp.com/api/deezer/artist/{id}
-    Example: https://striveschool-api.herokuapp.com/api/deezer/artist/412
+  
 
   </head>
   <body>
     <div class="artist-page-wrapper">
     <div class="artist-page container-fluid p-0"> 
-        <div class="sidebar">
+        <div class="sidebar ">
           <div class="sidebar-nav d-flex flex-column justify-content-between">
             
               <ul class="nav-section pl-0">
@@ -129,7 +125,7 @@
                 <div class="hero-image">
                   <div class="hero-text container">
                     <p class="monthly-listeners">99,999,999 MONTHLY LISTENERS</p>
-                    <h1>Queen</h1>
+                    <h1><a href="details-artist.html">Queen</a></h1>
                     <div class="btn-box mr-5">
                       <button type="button" class="btn play-btn mr-2">PLAY</button>
                       <button type="button" class="btn follow-btn mr-3">FOLLOW</button>
@@ -169,6 +165,8 @@
                         <h2>Albums</h2>
                       </div>
                     </div>
+
+                    <div class=" row listCards">
                     <div id="first-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
 
                         <div id="first-card" class="card">
@@ -325,6 +323,101 @@
                       </div>
 
                     </div>
+                    <div id="sixth-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="seventh-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                        <div class="card">
+                          <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                          <h6 class="card-title pt-2 mb-1">
+                            Bohemian Rhapsody (The Original Soundtrack)
+                          </h6>
+                          <p class="card-text">
+                            Queen
+                          </p>
+                        </div>
+
+                    </div>
+                    <div id="eigth-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="ninth-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="tenth-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="eleventh-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+                    <div id="twelfth-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+                      <div class="card">
+                        <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+                        <h6 class="card-title pt-2 mb-1">
+                          Bohemian Rhapsody (The Original Soundtrack)
+                        </h6>
+                        <p class="card-text">
+                          Queen
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
                     
                   </div>
                 </div>  <!--end of album columns --> 
@@ -564,16 +657,54 @@
               const sidebarToggle = function() {
                 
                 const sidebar = document.getElementsByClassName("sidebar");
+                
                 const mainWindow = document.getElementsByClassName("main-section");
                 if (sidebar[0].style.width < "12%") {
                   sidebar[0].style.width = "12%"
                   mainWindow[0].style.width = "88%"
+                  mainWindow[0].style.marginLeft = "12%"
                 }  else {
                   sidebar[0].style.width = "0%"
-                  mainWindow[0].style.width = "100%"
+                  mainWindow[0].style.width = "100%"    
+                  mainWindow[0].style.marginLeft = "0%"              
                 }
                
               }
     </script>
+    
+      <!-- // fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=queen`) 
+      //       .then((response) => response.json())
+      //       .then((artistData) => console.log(artistData))
+      //       .catch((err) => console.log(err));
+
+      // fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/412`) 
+      //       .then((response) => response.json())
+      //       .then((artistData) => console.log(artistData))
+      //       .catch((err) => console.log(err));
+
+      // fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/75621062`)
+      //       .then((response) => response.json())
+      //       .then((artistData) => console.log(artistData))
+      //       .catch((err) => console.log(err)); -->
+        <script src="artist.js">
+
+
+        </script>
+
+
+      
+<!--       
+//       <div id="tenth-column" class="col-12 col-sm-6 col-md-3 col-lg-2 ">
+
+// <div class="card">
+//   <img src="assets/images/queenPlaceholder.png" class="card-img-top" alt="...">
+//   <h6 class="card-title pt-2 mb-1">
+//     Bohemian Rhapsody (The Original Soundtrack)
+//   </h6>
+//   <p class="card-text">
+//     Queen
+//   </p>
+// </div> -->
+
   </body>
 </html>
